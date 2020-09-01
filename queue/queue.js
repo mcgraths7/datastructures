@@ -13,9 +13,9 @@ class Queue {
     throw new Error('Queue is empty');
   }
 
-  unshift(ele) {
+  push(ele) {
+    this.data.splice(this.top, 0, ele);
     this.top += 1;
-    this.data.splice(0, 0, ele);
     return this.data;
   }
 
